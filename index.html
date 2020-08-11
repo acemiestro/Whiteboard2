@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="shortcut icon" href="./NewIcons/favicon.ico" type="image/x-icon"> -->
     <title>Whiteboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,15 +13,34 @@
     <div class="tool-bar">
         <div class="hamburger"></div>
         <div class="tool-panel">
+
             <div class="tool">
                 <img src="./NewIcons/Black_Pencil.svg" alt="" class="tool-img" id="pencil" onclick="handleTool('pencil')">
-                <div class="tool-options"></div>
+                <div class="tool-options" id="pencil-options">
+                    <div class="slider">
+                        <input type="range" max='50' min='4' value='5' step='1'>
+                    </div>
+                    <div class="colors">
+                        <div class="color red" onclick="changeColor('red')"></div>
+                        <div class="color green" onclick="changeColor('green')"></div>
+                        <div class="color blue" onclick="changeColor('blue')"></div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="tool">
                 <img src="./NewIcons/Eraser.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">
-                <div class="tool-options"></div>
+                <div class="tool-options" id="eraser-options">
+                    <div class="slider">
+                        <input type="range" name="" max='50' min='4' value='5' step='1'>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="tool">
+            <img src="./NewIcons/StickyNote.svg" alt="" class="tool-img" id="sticky" onclick="handleTool('sticky')">
         </div>
     </div>
 
@@ -37,7 +57,8 @@
         })
     </script>
     <script src="tools.js"></script>
-    <script src="canvas.js"></script>
+    <script src="sticky.js"></script>
+    <script src="./canvas.js"></script>
 
 </body>
 
