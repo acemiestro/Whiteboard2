@@ -27,6 +27,14 @@ function handleTool(tool) {
         }
     } else if (tool == "sticky") {
         createSticky();
+    } else if (tool == "upload") {
+        uploadFile();
+    } else if (tool == "undo") {
+        undoLast();
+    } else if (tool == "redo") {
+        redoLast();
+    } else if (tool == "download") {
+        downloadBoard();
     }
 }
 
